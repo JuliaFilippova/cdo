@@ -60,8 +60,52 @@ button:focus {
 .pos-rel {
 	position: relative;
 }
-.section-container {
-	padding: 0 70px;
+#modal {
+    width: 100vw;
+    height: 100vh;
+    position: fixed;
+    background: rgba(0, 0, 0, 0.3);
+    top: 0;
+    left: 0;
+    display: none;
+}
+.menu-modal {
+    display: none;
+    position: fixed;
+    right: 0;
+    top: 0;
+    width: 27%;
+    height: 100%;
+    background: #434878e8;
+    padding: 70px 25px 40px;
+    z-index: 1;
+}
+.menu-list li a {
+    font-size: 28px;
+    margin: auto;
+    display: block;
+    text-align: center;
+    padding: 20px 0;
+}
+.menu-active {
+    color: #f3ca00!important;
+}
+/*HAMBURGER*/
+.hamburger-navigation-menu {
+	padding: 0 10%;
+}
+.hamburger-navigation-menu li a:hover {
+	color: #f3ca00;
+}
+.hamburger-navigation-menu li a {
+	color: #fff;
+	font-size: 25px;
+	padding: 8px 0;
+    display: inline-block;
+}
+.hamburger-navigation-menu .menu-phone {
+	position: absolute;
+    bottom: 35px;
 }
 .hamburger {
     display: none;
@@ -79,6 +123,20 @@ button:focus {
 .hamburger {
     margin-top: 6px;
     cursor: pointer;
+}
+.menu-open {
+	transition: all .5s;
+}
+.menu-open.active {
+	transform: rotate(-180deg);
+	transition: all .5s;
+}
+.hamburger-dropdown-content {
+	display: none;
+}
+.hamburger-dropdown-content .dropdown-content {
+    background: transparent; 
+    padding: 10px 0  0 25px;
 }
 .btn {
 	position: relative;
@@ -101,6 +159,9 @@ button:focus {
 }
 .btn:hover {
 	box-shadow: 0 12px 8px rgba(0, 0, 0, 0.3);
+}
+.section-container {
+	padding: 0 70px;
 }
 /* HEADER */
 .header-bg {
@@ -127,6 +188,7 @@ button:focus {
 .dropdown:hover .dropdown-content-wrap {
 	display: block;
 }
+
 .dropdown-content-wrap {
 	display: none;
 	position: absolute;
@@ -980,6 +1042,27 @@ button:focus {
 	}
 }
 /*--- 768-992px col-lg ---*/
+@media screen and (max-width: 1070px) {
+	.header-head {
+	    width: 500px;
+	    height: 500px;
+	    margin: 480px 0 0 35px;
+	}
+	.header-head__box {
+	    padding: 100px 0 0 150px;
+	}
+	.header-head__subtitle {
+	    font-size: 34px;
+	    margin: 10px 0 20px;
+	}
+	.header-head__btn {
+	    font-size: 34px;
+	}
+	.menu-modal {
+	    width: 35%;
+	}
+}
+/*--- 768-992px col-lg ---*/
 @media screen and (max-width: 992px) {
 	h1 {
 	    font-size: 45px;
@@ -991,7 +1074,19 @@ button:focus {
 	    padding: 10px 0 10px;
 	}
 	.header-head {
-	    margin: 220px 0 0 15px;
+	    width: 480px;
+	    height: 480px;
+	    margin: 435px 0 0 10px;
+	}
+	.header-head__box {
+	    padding: 100px 0 0 150px;
+	}
+	.header-head__btn {
+	    font-size: 33px;
+	}
+	.header-head__subtitle {
+	    font-size: 33px;
+	    margin: 15px 0 25px;
 	}
 	.header-advantages__list {
 	    padding: 50px 15px 50px 35px;
@@ -1151,31 +1246,27 @@ button:focus {
 		padding: 0;
 		padding-bottom: 20px;
 	}
+	/*MODAL*/
+	.menu-modal {
+	    width: 35%;
+	}
 }
 /*--- 575-768px col-lg ---*/
-@media screen and (max-width: 768px) {
+@media screen and (max-width: 767px) {
 	h1 {
-	    font-size: 37px;
+	    font-size: 38px;
 	}
 	.header-head__subtitle,
 	.header-head__btn {
 	    font-size: 21px;
 	}
 	.header-head {
-	    width: 330px;
-	    height: 330px;
-	    margin: 160px 0 0 35px;
+	    width: 350px;
+	    height: 350px;
+	    margin: 465px 0 0 10px;
 	}
-	.header-advantages__list li {
-	    font-size: 13px;
-	}
-	.header-advantages__list {
-	    padding: 30px 15px 30px 50px;
-	}
-	.header-head {
-	    width: 330px;
-	    height: 330px;
-	    margin: 220px 0 0 10px;
+	.header-head__box {
+	    padding: 60px 0 0 100px;
 	}
 	.section-container {
 	    padding: 0 20px;
@@ -1247,6 +1338,10 @@ button:focus {
 	    padding: 0 10px 20px;
 	    max-width: 50%;
 	}
+	/*MODAL*/
+	.menu-modal {
+	    width: 47%;
+	}
 }
 /*--- 420-575px col-lg ---*/
 @media screen and (max-width: 575px) {
@@ -1261,22 +1356,30 @@ button:focus {
 	    height: 3px;
 	    margin-bottom: 6px;
 	}
-	.header-head {
+	/*.header-head {
 	    width: 270px;
 	    height: 270px;
-	}
+	}*/
 	h1 {
-	    font-size: 30px;
+	    font-size: 36px;
 	}
 	.header-head__box {
-	    padding: 40px 0 0 60px;
+	    padding: 60px 0 0 100px;
 	}
 	.header-head__subtitle, .header-head__btn {
 	    font-size: 18px;
 	}
-	/*.header-advantages {
-		display: none;
-	}*/
+	.header-advantages__list li {
+	    font-size: 15px;
+	}
+	.header-advantages__list {
+	    padding: 60px 15px 60px 50px;
+	}
+	.header-advantages__slide {
+	    position: absolute;
+	    top: 69px;
+	    right: 0;
+	}
 	.advantages-content__img img {
 	    width: 45px;
 	    height: 53px;
@@ -1346,6 +1449,13 @@ button:focus {
 		max-width: 50%;
 		padding: 10px;
 	}
+	/*MODAL*/
+	.menu-modal {
+	    width: 52%;
+	}
+	.hamburger-navigation-menu li a {
+	    font-size: 20px;
+	}
 }
 /*--- 320-420px col-lg ---*/
 @media screen and (max-width: 420px) {
@@ -1353,33 +1463,28 @@ button:focus {
 	    font-size: 27px;
 	}
 	.header-head {
-        width: 225px;
-	    height: 225px;
-	    margin: 265px 0 0 10px;
+	    width: 290px;
+	    height: 290px;
+	    margin: 300px 0 0 10px;
 	}
 	.header-head__box {
-	    padding: 18px 0 0 45px;
+	    padding: 50px 0 0 75px;
 	}
 	.header-head__subtitle {
-	    margin: 8px 0 8px;
+	    margin: 10px 0 15px;
 	}
 	.header-head__btn {
 	    padding: 7px 6px;
 	    margin-left: -5px;
 	}
 	.header-head__subtitle, .header-head__btn {
-	    font-size: 19px;
-	}
-	.header-advantages__slide {
-	    position: absolute;
-	    top: 69px;
-	    right: 0;
+	    font-size: 22px;
 	}
 	.header-advantages__list {
-	    padding: 30px 5px 30px 30px;
+	    padding: 37px 5px 37px 33px;
 	}
 	.header-advantages__list li {
-	    font-size: 10px;
+	    font-size: 13px;
 	}
 	.section-container {
 	    padding: 0 15px;
@@ -1428,7 +1533,39 @@ button:focus {
 	.training-list__item img {
 	    height: 180px;
 	}
+	/*MODAL*/
+	.menu-modal {
+	    width: 72%;
+	}
 
+}
+/*--- 320-420px col-lg ---*/
+@media screen and (max-width: 321px) {
+	.header-head {
+	    width: 240px;
+	    height: 240px;
+	    margin: 252px 0 0 10px;
+	}
+	.header-head__box {
+	    padding: 30px 0 0 50px;
+	}
+	.header-head__subtitle {
+	    margin: 10px 0 15px;
+	}
+	.header-head__btn {
+	    padding: 7px 6px;
+	    margin-left: -5px;
+	}
+	.header-head__subtitle, .header-head__btn {
+	    font-size: 18px;
+	}
+	.header-advantages__list li {
+	    font-size: 11px;
+	}
+	.header-advantages__list {
+	    padding: 30px 5px 30px 22px;
+	}
+	
 }
 
 /*--- MEDIA QUERIES ---*/
