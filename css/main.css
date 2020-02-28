@@ -1,0 +1,1405 @@
+body {
+	font-family: 'Roboto';
+	margin: 0;
+	padding: 0;
+	font-size: 18px;
+	background: url('../img/body-bg.png') no-repeat top /cover;
+	overflow-x: hidden;
+}
+div, p, form, input, a, span, button {
+	box-sizing: border-box;
+}
+a {
+	text-decoration: none;
+	transition: .5s;
+	cursor: pointer;
+}
+a:hover {
+	text-decoration: none;
+}
+p {
+	margin: 0;
+	padding: 0;
+    line-height: 1.4em;
+    letter-spacing: 0.01em;
+}
+ul, li {
+	display: block;
+	padding: 0;
+	margin: 0;
+}
+h1, h2, h3, h4, h5, h6 {
+	padding: 0;
+	margin: 0;
+	font-weight: 500;
+	color: #020410;
+}
+h1 {
+	font-size: 76px;
+	color: #fff;
+}
+h2 {
+	font-size: 50px;
+}
+h3 {
+	font-size: 40px;
+}
+h4 {
+	font-size: 30px;
+	font-weight: 700;
+}
+button {
+	border: none;
+}
+button:focus {
+    outline: none;
+}
+.container {
+	max-width: 1520px;
+}
+.pos-rel {
+	position: relative;
+}
+.section-container {
+	padding: 0 70px;
+}
+.hamburger {
+    display: none;
+}
+#menuToggle span {
+    display: block;
+    width: 45px;
+    height: 5px;
+    background: #fff;
+    border-radius: 5px;
+    margin-left: auto;
+    margin-bottom: 8px;
+    cursor: pointer;
+}
+.hamburger {
+    margin-top: 6px;
+    cursor: pointer;
+}
+.btn {
+	position: relative;
+	overflow: hidden;
+	transition: all .5s;
+}
+.btn:before {
+	content: '';
+	position: absolute;
+	top: -20px;
+	left: -150px;
+	width: 70px;
+	height: 250px;
+	background: linear-gradient(90deg, rgb(250, 250, 250, .3), rgba(250, 250, 250, 0.1));
+	transform: skewX(-45deg);
+}
+.btn:hover:before {
+	left: 380px;
+	transition: 1s;
+}
+.btn:hover {
+	box-shadow: 0 12px 8px rgba(0, 0, 0, 0.3);
+}
+/* HEADER */
+.header-bg {
+	background: url('../img/header-bg.png') no-repeat center /cover;
+}
+.navigation {
+	background: #4348787a;
+	padding: 10px 0;
+}
+.nav-logo {
+	width: 200px;
+}
+.navigation-menu li a {
+	font-size: 25px;
+	color: #fff;
+}
+.navigation-menu li a:hover {
+	color: #f3ca00;
+}
+.dropdown {
+	position: relative;
+}
+.dropdown:hover .dropdown-content-wrap {
+	display: block;
+}
+.dropdown-content-wrap {
+	display: none;
+	position: absolute;
+	top: 28px;
+    width: 315px;
+    border-top: 35px solid transparent;
+}
+.dropdown-content {
+	background: #4348787a;
+	padding: 20px;
+}
+.dropdown-content li a {
+	margin-bottom: 15px;
+	display: block;
+}
+.header-home {
+	padding: 25px 0 80px;
+}
+.header-head {
+	background: #4348787a;
+	border-radius: 50%;
+	width: 600px;
+	height: 600px;
+	position: relative;
+	margin: 230px 0 0 70px;
+}
+.header-head__box {
+    padding: 120px 0 0 160px;
+}
+.header-head__subtitle {
+	color: #fff;
+	margin: 10px 0 30px;
+}
+.header-head__btn {
+    padding: 20px 25px;
+    display: inline-block;
+    border: 2px solid #fff;
+    border-radius: 60px;
+    font-size: 40px;
+    color: #fff;
+    margin-left: -33px;
+}
+.header-head__btn:hover {
+	color: #fff;
+}
+.header-advantages {
+	margin-left: auto;
+}
+.header-advantages__slide {
+	background: #4348787a;
+	border-radius: 50% 0 0 50%;
+}
+.header-advantages__slide_bright {
+	background: #f64b4ad6;
+}
+.header-advantages__list {
+    text-align: left;
+    padding: 120px 30px 120px 130px;
+}
+.header-advantages__list li {
+	font-size: 40px;
+    color: #fff;
+}
+/*advantages*/
+.advantages-content {
+	background: #ffffff94;
+	padding: 80px 0 100px;
+	margin: 100px 0 130px;
+}
+.advantages-content__card {
+	margin-top: 60px;
+	text-align: center;
+	padding: 0 20px;
+}
+.advantages-content__img {
+	width: 130px;
+	height: 130px;
+	padding: 25px;
+	border-radius: 50%;
+	border: 2px solid #020410;
+	margin: auto;
+}
+.advantages-content__img img {
+	width: 70px;
+	height: 85px;
+	object-fit: cover;
+	margin: auto;
+	display: block;
+}
+.advantages-content__img i {
+	font-size: 65px;
+}
+.advantages-content__title {
+	margin: 15px 0 20px;
+}
+.advantages-content__text {
+	font-size: 25px;
+	color: #020410;
+}
+/*DESCRIPTION*/
+.description-content {
+	margin-bottom: 225px;
+	position: relative;
+}
+.description-content:before {
+	content: '';
+	position: absolute;
+	background: #ffffff94;
+	top: -50px;
+	left: 0;
+	width: 70%;
+	height: 465px;
+	z-index: -1;
+}
+.description-content__two:before {
+    width: 55%;
+    height: 380px;
+    background: #ffffffb3;
+}
+.description-content__three:before {
+	height: 490px;
+	background: #ffffffc7;
+}
+.description-content__text {
+	/*padding: 50px 0 60px;*/
+}
+.description-content__img {
+    position: absolute;
+    top: -180px;
+    right: 50px;
+    width: 730px;
+    height: 730px;
+}
+.description-content__two .description-content__img {
+	right: 600px;
+	top: -157px;
+	width: 600px;
+	height: 600px;
+}
+.description-content__two {
+	margin-bottom: 60px;
+	padding-bottom: 150px;
+}
+.description-content__text p {
+    width: 710px;
+    margin-top: 35px;
+    font-size: 25px;
+}
+.description-content__phone {
+	width: 200px;
+	height: 200px;
+	background: #34BF42;
+	box-shadow: 0 0px 42px rgb(52, 191, 66, 0.9);
+	border-radius: 50%;
+	text-align: center;
+	padding-top: 35px;
+	position: absolute;
+	right: 180px;
+    top: 60px;
+    transition: all .5s;
+}
+.description-content__phone:hover {
+	box-shadow: 0 0 30px rgb(52, 191, 66, 0.6);
+}
+.description-content__phone a {
+	color: #fff;
+	font-size: 22px
+}
+.description-content__phone i {
+	font-size: 55px;
+	display: block;
+	margin-bottom: 14px;
+}
+.description-content__three .description-content__text p {
+	width: 440px;
+}
+.description-content__three {
+	margin-bottom: 165px;
+}
+/*PROGRAM*/
+.program-content,
+.entrance-content,
+.graduates-content {
+	background: #ffffffad;
+	padding: 80px 0 100px;
+	margin-bottom: 100px;
+}
+.program-content__subtitle {
+	margin: 20px 0 50px;
+	font-weight: 400;
+}
+.program-card__title {
+	text-transform: uppercase;
+	font-size: 30px;
+	margin: 15px 0 20px;
+}
+.program-card {
+	text-align: center;
+}
+.program-card__list li {
+	display: list-item;
+	margin-bottom: 11px;
+	font-size: 25px;
+}
+.program-card__list {
+	padding-left: 35px;
+    text-align: left;
+}
+.program-card__readmore {
+	color: #020410;
+	font-size: 18px;
+	padding: 8px 15px;
+	border-radius: 50px;
+	border: 2px solid #020410;
+	display: inline-block;
+	margin-bottom: 17px;
+}
+.program-card__readmore:hover {
+	color: #020410;
+	box-shadow: 0 8px 8px rgb(0, 0, 0, 0.2);
+}
+/*ENTRANCE*/
+.entrance {
+	position: relative;
+}
+.entrance-price {
+	background: #f64b4ad6;
+    padding: 20px 0 15px 390px;
+    position: absolute;
+    border-radius: 0 160px 160px 0;
+    width: 54%;
+    top: -230px;
+    color: #fff;
+}
+.entrance-price__title {
+	color: #fff;
+	margin-bottom: 25px;
+}
+.entrance-price p {
+	font-size: 20px;
+    margin-bottom: 17px;
+}
+.entrance-content__subtitle {
+    max-width: 665px;
+    margin-top: 30px;
+    font-size: 25px;
+}
+.entrance-stage {
+	margin-top: 155px;
+}
+.entrance-stage__card {
+	text-align: center;
+	position: relative;
+}
+.entrance-stage__card:before {
+	content: '→';
+	position: absolute;
+	font-size: 90px;
+    right: -70px;
+    top: -25px;
+}
+.entrance-stage__card_elem:before {
+	display: none;
+}
+.entrance-stage__card i {
+	font-size: 55px;
+}
+.entrance-stage__title {
+	font-weight: 400;
+	margin-top: 30px;
+}
+.entrance-form__title {
+	color: #fff;
+}
+.entrance-form {
+    background: #f64b4ad6;
+    padding: 40px 0 20px;
+    border-radius: 50%;
+    position: absolute;
+    text-align: center;
+    right: 0;
+    top: -185px;
+    width: 540px;
+    height: 540px;
+}
+.entrance-form__form input {
+	display: block;
+	margin-bottom: 10px;
+	margin: 15px auto;
+	border-radius: 50px;
+	border: none;
+	text-align: center;
+	padding: 15px 30px;
+	outline: none;
+}
+.entrance-form__btn {
+	background: #34BF42;
+	padding: 15px 30px;
+	border-radius: 50px;
+	color: #fff;
+}
+.entrance-form__btn:hover {
+	box-shadow: 0 5px 10px rgb(52, 191, 66, 0.6);
+}
+/*GRADUATES*/
+.graduates-content__title {
+	text-align: center;
+}
+.graduates-content__subtitle {
+	font-size: 30px;
+	margin: 30px 0;
+}
+.graduates-gallery {
+	padding: 0 55px;
+}
+.graduates-gallery__img {
+	width: 100%;
+	display: block;
+}
+/*FOOTER*/
+.footer {
+	background: #494F66;
+	padding: 80px 0 70px;
+}
+.footer-contacts {
+	padding-left: 60px;
+}
+.footer-contacts a,
+.footer-contacts p {
+	color: #EDEEF3;
+	font-size: 22px;
+}
+.footer-contacts a {
+	display: block;
+}
+.footer-contacts a:hover {
+	color: #020410;
+}
+
+/*PAGE distance-learning MEI*/
+.distance-learning {
+	padding: 80px 0;
+}
+.training-content {
+	background: #ffffffc4;
+	padding: 75px 25px 50px 35px;
+}
+.training-content__box {
+	padding-left: 65px;
+}
+.training-content__title {
+	font-weight: 700;
+}
+.training-content__subtitle {
+	font-size: 30px;
+	margin-top: 30px;
+}
+.training-list {
+	max-width: 100%;
+	margin-top: 100px;
+	/*justify-content: space-between;*/
+}
+.training-list__item {
+    text-align: center;
+    margin-bottom: 30px;
+    margin: 0 1%;
+    max-width: 18%;
+}
+.training-list__item img {
+	width: 100%;
+	height: 160px;
+}
+.training-list__item p {
+	font-size: 25px;
+	margin-top: 20px;
+}
+.license-text {
+	font-size: 20px;
+	margin-top: 50px;
+}
+.training-info {
+	position: relative;
+}
+.training-info .entrance-form {
+	top: -30px;
+	right: 150px;
+}
+.training-info__title {
+	font-weight: 700;
+	margin-top: 50px;
+}
+.training-info__list-title {
+	font-weight: 500;
+	margin-bottom: 11px;
+}
+.training-info__subtitle {
+	font-size: 25px;
+	margin-top: 15px;
+	margin-bottom: 50px;
+}
+.training-info__text li:first-child {
+	max-width: 755px;
+}
+.training-info__text li:nth-child(2),
+.training-info__text li:nth-child(3) {
+	max-width: 100%;
+}
+.training-info__inside-list {
+	padding-left: 23px;
+}
+.training-info__inside-list li {
+	list-style: disc;
+    display: list-item;
+}
+.training-info__title,
+.training-info__elem,
+.training-info__inside-list {
+	margin-bottom: 15px;
+}
+.training-info__list-title,
+.training-info__elem,
+.training-info__inside-list li {
+	font-size: 25px;
+}
+.training-info__elem a,
+.contacts-text p a {
+	color: #020410;
+	border-bottom: 1px solid transparent;
+}
+.training-info__elem a:hover,
+.contacts-text p a:hover {
+	color: #071567;
+	border-bottom: 1px solid;
+}
+.gallery-license {
+	width: 100%;
+	max-width: 18%;
+}
+.training-info__gallery-license {
+	justify-content: space-between;
+	display: flex;
+	margin-top: 80px;
+}
+/*PAGE GTEP*/
+.training-list_gtep,
+.training-list_vo {
+	max-width: 100%;
+}
+.training-info__gallery-license_gtep,
+.training-info__gallery-license_ksu {
+	width: 83%;
+    margin: 80px auto 0;
+}
+/*PAGE KSU*/
+.training-content_ksu {
+	padding: 45px 15px 50px 15px;
+}
+.training-list_ksu {
+	max-width: 100%;
+    flex-flow: wrap;
+    margin: 100px auto;
+    justify-content: space-between;
+}
+.training-list_ksu .training-list__item {
+    max-width: 15%;
+}
+.training-list_ksu .training-list__item img {
+    width: 100%;
+    height: 155px;
+}
+/*PAGE VO*/
+.training-info__text_vo li:nth-child(3) {
+	max-width: 1190px;
+}
+/*PAGE ABOUT + PAGE CONTACTS*/
+.about,
+.contacts {
+	padding: 65px 0;
+}
+.about-content,
+.contacts-content {
+	background: #ffffffa6;
+	padding: 75px 25px 70px 75px;
+}
+.contacts-content {
+	padding: 75px 25px 200px 75px;
+}
+.about-content__title,
+.contacts-content__title {
+	margin-bottom: 35px;
+	font-weight: 700;
+}
+.about-text p,
+.contacts p {
+	margin-bottom: 25px;
+	width: 1065px;
+	font-size: 25px;
+}
+.contacts-text p span {
+	font-weight: 500;
+}
+
+/*--- MEDIA QUERIES ---*/
+/*--- 992-1200px col-lg ---*/
+@media screen and (max-width: 1600px) {
+	h1 {
+		font-size: 55px;
+	}
+	h2 {
+		font-size: 40px;
+	}
+	h3 {
+		font-size: 30px;
+	}
+	h4 {
+		font-size: 25px;
+	}
+	.container {
+		max-width: 1200px;
+	}
+	.header-home {
+		padding: 25px 0 40px;
+	}
+	.navigation-menu li a {
+		font-size: 17px;
+	}
+	.dropdown-content-wrap {
+		top: 23px;
+		width: 230px;
+	}
+	.header-head {
+		width: 470px;
+		height: 470px;
+		margin: 145px 0 0 70px;
+	}
+	.header-head__box {
+		padding: 75px 0 0 100px;
+	}
+	.header-head__btn {
+		font-size: 28px;
+		margin-left: -22px;
+	}
+	.header-advantages__list {
+	    padding: 80px 30px 80px 110px;
+	}
+	.header-advantages__list li {
+		font-size: 29px;
+	}
+	.advantages-content {
+		margin: 100px 0;
+	}
+	.advantages-content__text {
+		font-size: 20px;
+		color: #020410;
+	}
+	.description-content__img {
+		top: -135px;
+		width: 550px;
+		height: 550px;
+	}
+	.description-content__two .description-content__img {
+		right: 470px;
+		top: -88px;
+		width: 450px;
+		height: 450px;
+	}
+	.description-content__two {
+	    padding-bottom: 25px;
+	}
+	.description-content__two:before {
+		height: 300px;
+	}
+	.description-content__text p {
+		width: 530px;
+		margin-top: 15px;
+		font-size: 18px;
+	}
+	.description-content:before {
+		height: 330px;
+		top: -30px;
+	}
+	.description-content__three:before {
+		height: 415px;
+	}
+	.description-content__three:before {
+		height: 350px;
+	}
+	.description-content__three .description-content__text p {
+		width: 320px;
+	}
+	.description-content {
+		margin-bottom: 175px;
+	}
+	.description-content__phone {
+		width: 150px;
+		height: 150px;
+		padding-top: 25px;
+	}
+	.description-content__phone a {
+		font-size: 18px
+	}
+	.description-content__phone i {
+	    font-size: 34px;
+	}
+	.description-content__three {
+		margin-bottom: 140px;
+	}
+	.program-card__list li {
+		font-size: 18px;
+	}
+	.entrance-form {
+		top: -170px;
+		width: 420px;
+		height: 420px;
+	}
+	.entrance-form__form input {
+		padding: 8px 10px;
+	}
+	.entrance-form__btn {
+		padding: 8px 15px;
+	}
+	.entrance-content__subtitle {
+		max-width: 420px;
+		font-size: 18px;
+	}
+	.entrance-stage {
+		margin-top: 100px;
+	}
+	.entrance-price {
+	    padding: 20px 0 15px 220px;
+	}
+	.footer-contacts a,
+	.footer-contacts p {
+		font-size: 16px;
+	}
+	/*page ksu mei vo gtep*/
+	.training-info__list-title,
+	.training-info__elem,
+	.training-info__inside-list li {
+		font-size: 20px;
+	}
+	.training-list__item p {
+		font-size: 20px;
+	}
+	.license-text {
+		font-size: 15px;
+	}
+	.training-info__subtitle {
+		font-size: 19px;
+	}
+	.training-info__text li:nth-child(2),
+	.training-info__text li:nth-child(3) {
+		max-width: 975px;
+	}
+	.training-info__text li:first-child {
+		max-width: 590px;
+	}
+	.training-info .entrance-form {
+	    right: 40px;
+	}
+	.training-info__text li:first-child {
+	    max-width: 470px;
+	}
+	.training-info__gallery-license_gtep,
+	.training-info__gallery-license_ksu {
+	    padding: 0;
+	}
+	.about-text p,
+	.contacts p {
+		width: 760px;
+		font-size: 18px;
+	}
+}
+/*--- 992-1200px col-lg ---*/
+@media screen and (max-width: 1350px) {
+	.entrance-price {
+	    padding: 20px 0 15px 200px;
+	}
+	/*page ksu mei vo gtep*/
+	.training-list_ksu {
+	    justify-content: center;
+	}
+	.training-list_gtep .training-list__item,
+	.training-list_ksu .training-list__item {
+	    max-width: 18%;
+	}
+}
+/*--- 992-1200px col-lg ---*/
+@media screen and (max-width: 1200px) {
+	.navigation-menu {
+		display: none!important;
+	}
+	.hamburger {
+	    display: block;
+	}
+	.header-head {
+	    width: 380px;
+	    height: 380px;
+	    margin: 160px 0 0 35px;
+	}
+	h1 {
+	    font-size: 50px;
+	}
+	h2 {
+	    font-size: 35px;
+	}
+	h3 {
+	    font-size: 25px;
+	}
+	.header-head__box {
+	    padding: 65px 0 0 85px;
+	}
+	.header-head__subtitle {
+	    font-size: 25px;
+	    margin: 10px 0 15px;
+	}
+	.header-head__btn {
+	   padding: 10px 13px;
+	    font-size: 25px;
+	    margin-left: -15px;
+	}
+	.header-advantages__list {
+	    padding: 50px 15px 50px 55px;
+	}
+	.header-advantages__list li {
+	    font-size: 24px;
+	}
+	.advantages-content {
+	    margin: 85px 0;
+	}
+	.advantages-content__title {
+		font-size: 30px;
+	}
+	.advantages-content {
+	    padding: 55px 45px 70px;
+	}
+	.description-content__img {
+	    width: 440px;
+	    height: 440px;
+	    top: -100px;
+	    right: 30px;
+	}
+	.description-content__two .description-content__img {
+	    width: 360px;
+	    height: 360px;
+	    right: 310px;
+	    top: -75px;
+	}
+	.description-content__phone {
+	    right: 100px;
+	    top: 25px;
+	}
+	.description-content:before {
+	    height: 300px;
+	}
+	.description-content__two:before {
+	    height: 265px;
+	}
+	.description-content__three:before {
+	    height: 320px;
+	}
+	.description-content__text p {
+	    width: 455px;
+	    margin-top: 10px;
+	}
+	.description-content {
+	    margin-bottom: 118px;
+	}
+	.description-content__three {
+	    margin-bottom: 85px;
+	}
+	.description-content__two {
+	    margin-bottom: 0px;
+	    padding-bottom: 135px;
+	}
+	.program-card__list {
+	    padding-left: 80px;
+	}
+	.program-card {
+	    margin-bottom: 40px;
+	}
+	.entrance-price {
+	    padding: 10px 0 12px 95px;
+	    top: -210px;
+	}
+	.graduates-content__subtitle {
+	    font-size: 27px;
+	}
+	.graduates-gallery {
+	    padding: 0 25px;
+	}
+	.program-content, .entrance-content, .graduates-content {
+	    padding: 50px 20px 70px;
+	}
+	.entrance-form {
+	    padding: 20px 0 20px;
+	    top: -125px;
+	    width: 390px;
+	    height: 390px;
+	    right: -25px;
+	}
+	.entrance-content__subtitle {
+	    max-width: 400px;
+	    margin-top: 24px;
+	}
+	/*page ksu mei vo gtep*/
+	.training-content {
+	    padding: 45px 25px 50px 35px;
+	}
+	.training-list {
+	    flex-flow: wrap;
+	    justify-content: center;
+	}
+	.training-list__item {
+	    max-width: 26%;
+	}
+	.training-list_gtep {
+	    max-width: 100%;
+	}
+	.training-list_ksu {
+	    margin: 50px auto;
+	}
+	.training-list_gtep .training-list__item,
+	.training-list_ksu .training-list__item {
+	    max-width: 22%;
+	}
+	.training-list_gtep {
+		justify-content: end;
+	}
+	.training-info {
+	    padding-top: 430px;
+	}
+	.training-info .entrance-form {
+	    width: 100%;
+	    border-radius: 100px;
+	    right: 50%;
+	    top: 30px;
+    	transform: translate(50%);
+	}
+	.entrance-form__form input {
+	    width: 255px;
+	}
+	.entrance-form__btn {
+	    background: #34BF42;
+	    padding: 10px 35px;
+	    border-radius: 50px;
+	    color: #fff;
+	}
+	.training-content__box {
+	    padding-left: 25px;
+	}
+}
+/*--- 768-992px col-lg ---*/
+@media screen and (max-width: 992px) {
+	h1 {
+	    font-size: 45px;
+	}
+	h3 {
+	    font-size: 22px;
+	}
+	.header-home {
+	    padding: 10px 0 10px;
+	}
+	.header-head {
+	    margin: 220px 0 0 15px;
+	}
+	.header-advantages__list {
+	    padding: 50px 15px 50px 35px;
+	}
+	.header-advantages__list li {
+	    font-size: 19px;
+	}
+	.advantages-content__text {
+	    font-size: 19px;
+	}
+	.description-content__text p {
+	    width: 345px;
+	}
+	.description-content__img {
+	    width: 370px;
+	    height: 370px;
+	    top: -35px;
+	    right: 0px;
+	}
+	.description-content__two .description-content__img {
+    	width: 300px;
+	    height: 300px;
+	    right: 160px;
+	    top: -60px;
+	}
+	.description-content:before {
+	    top: -15px;
+	}
+	.description-content:before {
+	    height: 330px;
+	}
+	.description-content__two:before {
+	    height: 210px;
+	}
+	.description-content__three:before {
+	    height: 300px;
+	}
+	.description-content {
+	    margin-bottom: 100px;
+	}
+	.description-content__two {
+	    padding-bottom: 3px;
+	}
+	.description-content__two .description-content__text p {
+		width: 300px;
+	}
+	.description-content__phone {
+	   display: none;
+	}
+	.program-content, .entrance-content, .graduates-content {;
+	    margin-bottom: 60px;
+	    padding: 50px 20px 40px;
+	}
+	.entrance-price {
+	    padding: 5px 0 5px 60px;
+	    top: -150px;
+	    width: 60%;
+	}
+	.entrance-price__title {
+	    margin-bottom: 10px;
+	}
+	.entrance-price p {
+	    font-size: 17px;
+	    margin-bottom: 10px;
+	}
+	.entrance-stage__card {
+	    margin-bottom: 40px;
+	}
+	.entrance-stage__card:before {
+	    display: none;
+	}
+	.entrance-form {
+	    top: -110px;
+	    right: -85px;
+	    padding: 15px 0 20px;
+	    width: 340px;
+	    height: 340px;
+	}
+	.entrance-form__title {
+	    font-size: 22px;
+	}
+	.entrance-form__form input {
+	    margin: 10px auto;
+	    padding: 6px 10px;
+	}
+	.entrance-stage__card:before {
+	    font-size: 70px;
+	    right: -50px;
+	    top: 0px;
+	}
+	.graduates-content__subtitle {
+	    font-size: 25px;
+	}
+	.graduates-gallery__img {
+		margin-bottom: 30px;
+	}
+	.footer-contacts {
+	    padding-left: 0;
+	}
+	/*page about contacts*/
+	.about-content, .contacts-content {
+	    padding: 45px 25px 30px 40px;
+	}
+	.about-text p, .contacts p {
+	    margin-bottom: 20px;
+	    width: 100%;
+	}
+	.entrance-form {
+	    top: 210px;
+	    right: 50%;
+	    transform: translate(50%);
+	    padding: 25px 0 20px;
+	    width: 100%;
+	    border-radius: 100px;
+	    height: 385px;
+	}
+	.entrance-form__form input {
+	    margin: 10px auto;
+	    padding: 10px 22px;
+	}
+	.entrance-stage {
+	    margin-top: 460px;
+	}
+	/*page ksu mei vo gtep*/
+	.training-list__item,
+	.training-list_gtep .training-list__item,
+	.training-list_ksu .training-list__item {
+	    max-width: 30%;
+	    margin-bottom: 30px;
+	}
+	.training-list_gtep {
+	    max-width: 100%;
+	}
+	.training-list__item img {
+	    width: 100%;
+	}
+	.training-info {
+	    padding-top: 390px;
+	}
+	.training-content {
+	    padding: 45px 20px 50px 20px;
+	}
+	.training-content__box {
+	    padding-left: 0;
+	}
+	.gallery-license {
+	    width: 100%;
+	    padding: 10px;
+    	max-width: 26%;
+	}
+	.training-info__gallery-license_mei {
+		flex-flow: wrap;
+	}
+	.training-info__gallery-license_mei .gallery-license {
+		max-width: 30%;
+		margin: auto;
+		padding: 0;
+		padding-bottom: 20px;
+	}
+}
+/*--- 575-768px col-lg ---*/
+@media screen and (max-width: 768px) {
+	h1 {
+	    font-size: 37px;
+	}
+	.header-head__subtitle,
+	.header-head__btn {
+	    font-size: 21px;
+	}
+	.header-head {
+	    width: 330px;
+	    height: 330px;
+	    margin: 160px 0 0 35px;
+	}
+	.header-advantages__list li {
+	    font-size: 13px;
+	}
+	.header-advantages__list {
+	    padding: 30px 15px 30px 50px;
+	}
+	.header-head {
+	    width: 330px;
+	    height: 330px;
+	    margin: 220px 0 0 10px;
+	}
+	.section-container {
+	    padding: 0 20px;
+	}
+	h2 {
+	    font-size: 31px;
+	    text-align: center;
+	}
+	.description-content__img {
+	    display: none;
+	}
+	.description-content__text p {
+	    width: 100%;
+	}
+	.description-content:before {
+	    display: none;
+	}
+	.description-content {
+		background: linear-gradient(to right, #ffffff9e, #ffffff9e, #ffffff6b, #ffffff1a);
+		margin-bottom: 35px;
+		padding: 20px 0;
+	}
+	.description-content__text h2 {
+		text-align: left;
+	}
+	.program-content__subtitle {
+	    text-align: center;
+	}
+	.entrance-price__title {
+	    text-align: left;
+	}
+	.entrance-price {
+	    padding: 5px 0 5px 20px;
+	    top: -125px;
+	    width: 70%;
+	}
+	.entrance-content__title,
+	.entrance-content__subtitle {
+	    max-width: 100%;
+	}
+	.entrance-form__btn {
+	    padding: 10px 30px;
+	}
+	.graduates-content__subtitle {
+	    text-align: center;
+	}
+	.footer-contacts {
+	    text-align: center;
+	    margin-bottom: 20px;
+	}
+	.training-info {
+	    padding-top: 430px;
+	}
+	/*page ksu mei vo gtep*/
+	.training-list_gtep .training-list__item, .training-list__item,
+	.training-list_ksu .training-list__item {
+	    max-width: 46%;
+	}
+	.training-list_vo,
+	.training-list_gtep {
+	    flex-flow: wrap;
+	    justify-content: center;
+	}
+	.training-info__gallery-license_ksu,
+	.training-info__gallery-license_gtep {
+		flex-flow: wrap;
+	}
+	.gallery-license {
+	    padding: 0 10px 20px;
+	    max-width: 50%;
+	}
+}
+/*--- 420-575px col-lg ---*/
+@media screen and (max-width: 575px) {
+	.header-head {
+	    width: 270px;
+	    height: 270px;
+	}
+	h1 {
+	    font-size: 30px;
+	}
+	.header-head__box {
+	    padding: 40px 0 0 60px;
+	}
+	.header-head__subtitle, .header-head__btn {
+	    font-size: 18px;
+	}
+	.header-advantages {
+		display: none;
+	}
+	.advantages-content,
+	.program-content,
+	.entrance-content,
+	.graduates-content {
+	    padding: 55px 10px 70px;
+	}
+	.advantages-content__card {
+	    padding: 0; 
+	}
+	.entrance-price__title {
+		font-size: 27px;
+	}
+	.entrance-price {
+	    top: -150px;
+	    width: 85%;
+	}
+	.entrance-form {
+	    top: 220px;
+	    padding: 12px 0 20px;
+	    width: 100%;
+	    height: 370px;
+	}
+	.graduates-content__subtitle {
+	    font-size: 20px;
+	}
+	.footer {
+	    padding: 40px 0 15px;
+	}
+	/*page ksu mei vo gtep*/
+	.training-list_gtep .training-list__item,
+	.training-list_ksu .training-list__item {
+	    max-width: 100%;
+	}
+	.training-list__item img {
+	    height: 145px;
+	}
+	.training-info__gallery-license_gtep, .training-info__gallery-license_ksu {
+	    width: 100%;
+	    margin: 40px auto 0;
+	}
+	.training-list_ksu .training-list__item img {
+	    width: 260px;
+	    height: 185px;
+	}
+	.training-info__gallery-license_mei .gallery-license {
+		max-width: 50%;
+		padding: 10px;
+	}
+}
+/*--- 320-420px col-lg ---*/
+@media screen and (max-width: 420px) {
+	h1 {
+	    font-size: 27px;
+	}
+	.header-head {
+	    width: 235px;
+	    height: 235px;
+	}
+	.header-head__box {
+	    padding: 30px 0 0 55px;
+	}
+	.header-head__subtitle {
+	    margin: 4px 0 7px;
+	}
+	.header-head__btn {
+	    padding: 8px 10px;
+	}
+	.section-container {
+	    padding: 0 15px;
+	}
+	h2 {
+	    font-size: 24px;
+	}
+	.description-content__three .description-content__text p {
+	    width: 100%;
+	}
+	.program-card__list {
+	    padding-left: 45px;
+	}
+	.entrance-price {
+	    width: 90%;
+	}
+	.entrance-price__title {
+	    font-size: 23px;
+	}
+	.entrance-price p {
+	    font-size: 16px;
+	}
+	.entrance-form {
+	    top: 330px;
+	    background: transparent;
+	}
+	.entrance-form__title {
+	    font-size: 25px;
+	    margin-bottom: 20px;
+	    color: #f53f39;
+	}
+	.entrance-form__btn {
+	    padding: 13px 45px;
+	    margin-top: 15px;
+	}
+	.entrance-form__form input {
+	    width: 230px;
+	}
+	.graduates-gallery {
+	    padding: 0;
+	}
+	/*page ksu mei vo gtep*/
+	.training-list_vo, .training-list__item {
+	    max-width: 100%;
+	}
+	.training-list__item img {
+	    height: 180px;
+	}
+
+}
+
+/*--- MEDIA QUERIES ---*/
+/*--- 992-1200px col-lg ---*/
+/*@media screen and (max-width: 1200px) {
+
+}*/
+/*--- 768-992px col-lg ---*/
+/*@media screen and (max-width: 992px) {
+	
+}*/
+/*--- 575-768px col-lg ---*/
+/*@media screen and (max-width: 768px) {
+	
+}*/
+/*--- 420-575px col-lg ---*/
+/*@media screen and (max-width: 575px) {
+	
+}*/
+/*--- 320-420px col-lg ---*/
+/*@media screen and (max-width: 420px) {
+	
+}*/
