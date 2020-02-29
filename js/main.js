@@ -41,7 +41,7 @@ $(document).ready(function () {
         if ($(phone).val().length < 17) return validateForm(this);
         $.ajax({
             type: "POST",
-            url:  "mail.php",
+            url:  "../mail.php",
             data: $(this).serialize()
         }).done(() => {
             $(this).trigger('reset');
