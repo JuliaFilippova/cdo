@@ -28,3 +28,25 @@ $(document).ready(function () {
         }
     });
 });
+
+
+// form
+$(document).ready(function () {
+    $('#form').submit(function (e) {
+        e.preventDefault();
+        resetFormsErrors();
+        const name  = $(this).find("input[name='name']"),
+              phone = $(this).find("input[name='phone']");
+        if (!name || !phone || $(name).val().trim().length === 0 || $(phone).val().length === 0) return validateForm(this);
+        if ($(phone).val().length < 17) return validateForm(this);
+        $.ajax({
+            type: "POST",
+            url:  "mail.php",
+            data: $(this).serialize()
+        }).done(() => {
+            $(this).trigger('reset');
+            $('.overlayMessage').fadeIn();
+        });
+        return false;
+    });
+});

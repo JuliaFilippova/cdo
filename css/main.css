@@ -237,9 +237,12 @@ button:focus {
 .header-advantages {
 	margin-left: auto;
 }
-.header-advantages__slide {
+/*.header-advantages__slide {
 	background: #4348787a;
 	border-radius: 50% 0 0 50%;
+}*/
+.header-advantages__slide {
+	background: url('../img/header-elem1.png') no-repeat center /cover;
 }
 .header-advantages__slide_bright {
 	background: #f64b4ad6;

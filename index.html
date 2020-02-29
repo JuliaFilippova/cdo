@@ -429,13 +429,13 @@
 						<h3 class="entrance-form__title">
 							Оставьте <br> заявку на обучение
 						</h3>
-						<form action="" class="entrance-form__form">
-							<input type="text" placeholder="Имя">
-							<input type="text" placeholder="Телефон">
-							<input type="text" placeholder="@mail">
-							<input type="text" placeholder="Населенный пункт">
+						<form action="mail.php" class="entrance-form__form" id="form">
+							<input type="text" name="name" placeholder="Имя">
+							<input type="text" name="phone" placeholder="Телефон">
+							<input type="text" name="email" placeholder="@mail">
+							<input type="text" name="text" placeholder="Населенный пункт">
 						</form>
-						<button class="entrance-form__btn">
+						<button type="submit" class="entrance-form__btn">
 							Отправить
 						</button>
 					</div>
@@ -614,6 +614,9 @@
 		</ul>
     </div>
     <!-- MENU MODAL WINDOW-END -->
+    <div id="overlayMessage">
+    	Спасибо! Форма отправлена.
+    </div>
 	<script src="js/jquery-3.4.1.min.js"></script>
 	<!-- SLICK SLIDER -->
 	<script src="js/slick.min.js"></script>
