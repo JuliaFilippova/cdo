@@ -60,6 +60,7 @@ button:focus {
 .pos-rel {
 	position: relative;
 }
+
 #modal {
     width: 100vw;
     height: 100vh;
@@ -68,7 +69,64 @@ button:focus {
     top: 0;
     left: 0;
     display: none;
+    z-index: 999999;
 }
+/*thank modal*/
+.popup-form_thank {
+	position: fixed;
+	width: 400px;
+	left: 50%;
+	top: 50%;
+	transform: translate(-50%, -50%);
+	padding: 70px 17px 30px;
+	box-sizing: border-box;
+	background-color: #fff;
+	text-align: center;
+	margin-bottom: 45px;
+}
+.form-modal__title {
+	font-size: 20px;
+	font-weight: 500;
+}
+.form-modal__subtitle {
+	font-size: 15px;
+	color: #777;
+	font-weight: 500;
+	margin-top: 30px;
+}
+.close-popup {
+	position: absolute;
+	top: 25px;
+    right: 10px;
+    width: 30px;
+    height: 30px;
+	cursor: pointer;
+}
+.close-popup:before {
+	content: '';
+	position: absolute;
+	width: 22px;
+	height: 1px;
+	background: #C4C4C4;
+	top: 5px;
+	left: -5px;
+	transform: rotate(-45deg);
+}
+.close-popup:after {
+	content: '';
+	position: absolute;
+	width: 22px;
+	height: 1px;
+	background: #C4C4C4;
+	top: 5px;
+	left: -5px;
+	transform: rotate(45deg);
+}
+.close-popup:hover:before,
+.close-popup:hover:after {
+	background: #434878;
+}
+/*modal menu*/
 .menu-modal {
     display: none;
     position: fixed;

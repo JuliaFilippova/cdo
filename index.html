@@ -431,13 +431,13 @@
 						</h3>
 						<form action="mail.php" class="entrance-form__form" id="form">
 							<input type="text" name="name" placeholder="Имя">
-							<input type="text" name="phone" placeholder="Телефон">
-							<input type="text" name="email" placeholder="@mail">
+							<input type="text" name="phone" placeholder="Телефон" required>
+							<input type="text" name="email" placeholder="@mail" required>
 							<input type="text" name="text" placeholder="Населенный пункт">
+							<button type="submit" class="entrance-form__btn">
+								Отправить
+							</button>
 						</form>
-						<button type="submit" class="entrance-form__btn">
-							Отправить
-						</button>
 					</div>
 					<div class="entrance-stage">
 						<div class="row">
@@ -614,9 +614,22 @@
 		</ul>
     </div>
     <!-- MENU MODAL WINDOW-END -->
-    <div id="overlayMessage">
-    	Спасибо! Форма отправлена.
-    </div>
+    <!-- FORM THANKS MODAL -->
+	<div class="js-overlay-window-thank-you js-overlay-window" id="modal">
+		<div class="popup-form_thank js-overlay-thank-you">
+
+			<div class="close-popup js-close-window"></div>
+
+			<p class="form-modal__title modal__title">
+				Спасибо!
+			</p>
+
+			<p class="form-modal__subtitle">
+				Ваша заявка получена. Наш менеджер <br> перезвонит вам в ближайшее время.
+			</p>
+
+		</div>
+	</div>
 	<script src="js/jquery-3.4.1.min.js"></script>
 	<!-- SLICK SLIDER -->
 	<script src="js/slick.min.js"></script>

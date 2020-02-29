@@ -29,24 +29,42 @@ $(document).ready(function () {
     });
 });
 
-
-// form
-$(document).ready(function () {
-    $('#form').submit(function (e) {
-        e.preventDefault();
-        resetFormsErrors();
-        const name  = $(this).find("input[name='name']"),
-              phone = $(this).find("input[name='phone']");
-        if (!name || !phone || $(name).val().trim().length === 0 || $(phone).val().length === 0) return validateForm(this);
-        if ($(phone).val().length < 17) return validateForm(this);
+// Отправка заявки 
+$(document).ready(function() {
+    $('#form').submit(function() { // проверка на пустоту заполненных полей. Атрибут html5 — required не подходит (не поддерживается Safari)
+        if (document.form.name.value == '' || document.form.phone.value == '' ) {
+            valid = false;
+            return valid;
+        }
         $.ajax({
             type: "POST",
-            url:  "../mail.php",
+            url: "mail/mail.php",
             data: $(this).serialize()
-        }).done(() => {
-            $(this).trigger('reset');
-            $('.overlayMessage').fadeIn();
+        }).done(function() {
+            $('.js-overlay-window-thank-you').fadeIn();
+            $(this).find('input').val('');
+            $('#form').trigger('reset');
         });
         return false;
     });
+});
+
+// CLOSE WINDOW MODAL
+$('.js-close-window').click(function (e) {
+    e.preventDefault();
+    
+    $('.js-overlay-window').fadeOut();
+});
+// CLOSE OVERLAY MODAL
+$(document).mouseup(function (e) {
+    let popup = $('.js-overlay-window');
+
+    if (e.target != popup[0] && popup.has(e.target).length === 0) {
+        $('.js-overlay-window').fadeOut();
+    }
+});
+
+// Маска ввода номера телефона (плагин maskedinput)
+$(function($){
+    $('[name="phone"]').mask("+7(999) 999-9999");
 });
