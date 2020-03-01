@@ -69,7 +69,6 @@ button:focus {
     top: 0;
     left: 0;
     display: none;
-    z-index: 999999;
 }
 .menu-modal {
     display: none;
