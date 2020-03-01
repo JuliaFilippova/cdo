@@ -58,10 +58,16 @@ const validateForm = form => {
     const name  = $(form).find("input[name='name']"),
           phone = $(form).find("input[name='phone']");
           email = $(form).find("input[name='email']");
+          text = $(form).find("input[name='text']");
     if ($(name).val().length === 0) {
         $(name).siblings('span.error-input').text('Поле должно быть заполнено!');
 
         $(name).parent('label.form-input').addClass('has-errors')
+    }
+    if ($(text).val().length === 0) {
+        $(text).siblings('span.error-input').text('Поле должно быть заполнено!');
+
+        $(text).parent('label.form-input').addClass('has-errors')
     }
     if ($(email).val().length === 0) {
         $(email).siblings('span.error-input').text('Поле должно быть заполнено!');
@@ -87,8 +93,9 @@ $(document).ready(function () {
         const name  = $(this).find("input[name='name']"),
               phone = $(this).find("input[name='phone']"),
               email  = $(this).find("input[name='email']");
-        if (!name || !phone || !email || $(name).val().trim().length === 0 || $(phone).val().length === 0) return validateForm(this);
-        if ($(phone).val().length < 17) return validateForm(this);
+              text  = $(this).find("input[name='text']");
+        if (!name || !phone || !email || !text || $(name).val().trim().length === 0 || $(phone).val().length === 0) return validateForm(this);
+        if ($(phone).val().length <= 11) return validateForm(this);
         $.ajax({
             type: "POST",
             url:  "mail/mail.php",

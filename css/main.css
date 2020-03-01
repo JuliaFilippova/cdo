@@ -79,6 +79,7 @@ button:focus {
     position: relative;
     margin: auto;
     padding-bottom: 15px;
+    border: 1px solid transparent;
 }
 #modal {
     width: 100vw;
