@@ -73,8 +73,10 @@ button:focus {
     bottom: -15px;
     transform: translate(-50%);
 }
-.entrance-form__form input {
-	position: relative;
+.form-input {
+	display: block;
+    width: 270px;
+    position: relative;
 }
 #modal {
     width: 100vw;
