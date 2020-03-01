@@ -118,7 +118,7 @@
 					<h3 class="header-head__subtitle">
 						В московских <br> вузах и колледжах
 					</h3>
-					<a href="#" class="btn header-head__btn">
+					<a href="#" class="btn header-head__btn" id="btnForm">
 						оставить заявку 
 					</a>
 				</div>
@@ -614,6 +614,22 @@
 		</ul>
     </div>
     <!-- MENU MODAL WINDOW-END -->
+    <!-- modal form  -->
+    <div class="popup-form">
+    	<div class="close-popup js-close-window"></div>
+		<h3 class="entrance-form__title">
+			Оставьте <br> заявку на обучение
+		</h3>
+		<form class="entrance-form__form" id="popupForm" name="form">
+			<input type="text" name="name" placeholder="Имя">
+			<input type="text" name="phone" placeholder="Телефон" required>
+			<input type="text" name="email" placeholder="@mail" required>
+			<input type="text" name="text" placeholder="Населенный пункт">
+			<button type="submit" class="entrance-form__btn">
+				Отправить
+			</button>
+		</form>
+	</div>
     <!-- FORM THANKS MODAL -->
 	<div class="js-overlay-window-thank-you js-overlay-window" id="modal">
 		<div class="popup-form_thank js-overlay-thank-you">
