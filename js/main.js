@@ -52,7 +52,7 @@ $(document).ready(function () {
 const resetFormsErrors = () => {
     $('form span.error-input').each((i, el) => $(el).text(''));
 
-    $('label.has-errors').removeClass('has-errors')
+    // $('label.has-errors').removeClass('has-errors')
 };
 const validateForm = form => {
     const name  = $(form).find("input[name='name']"),
@@ -61,20 +61,20 @@ const validateForm = form => {
     if ($(name).val().length === 0) {
         $(name).siblings('span.error-input').text('Поле должно быть заполнено!');
 
-        $(name).parent('label.form-input').addClass('has-errors')
+        // $(name).parent('label.form-input').addClass('has-errors')
     }
     if ($(email).val().length === 0) {
         $(email).siblings('span.error-input').text('Поле должно быть заполнено!');
 
-        return $(phone).parent('label.form-input').addClass('has-errors')
+        // return $(phone).parent('label.form-input').addClass('has-errors')
     }
     if ($(phone).val().length === 0) {
         $(phone).siblings('span.error-input').text('Поле должно быть заполнено!');
 
-        return $(phone).parent('label.form-input').addClass('has-errors')
+        // return $(phone).parent('label.form-input').addClass('has-errors')
     }
     if ($(phone).val().length < 12) {
-        $(phone).parent('label.form-input').addClass('has-errors');
+        // $(phone).parent('label.form-input').addClass('has-errors');
 
         return $(phone).siblings('span.error-input').text('Введите телефон полностью!');
     }

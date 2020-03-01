@@ -60,9 +60,9 @@ button:focus {
 .pos-rel {
 	position: relative;
 }
-.has-errors {
+/*.has-errors {
 	border: 1px solid #E13838;
-}
+}*/
 .error-input {
 	color: #E13838;
     font-size: 9px;
@@ -70,7 +70,7 @@ button:focus {
     position: absolute;
     width: 100%;
     left: 50%;
-    bottom: -15px;
+    bottom: -10px;
     transform: translate(-50%);
 }
 .form-input {
@@ -78,6 +78,7 @@ button:focus {
     width: 270px;
     position: relative;
     margin: auto;
+    padding-bottom: 15px;
 }
 #modal {
     width: 100vw;
@@ -569,8 +570,8 @@ button:focus {
 }
 .entrance-form__form input {
 	display: block;
-	margin-bottom: 10px;
-	margin: 15px auto;
+	/*margin-bottom: 10px;
+	margin: 15px auto;*/
 	border-radius: 50px;
 	border: none;
 	text-align: center;
