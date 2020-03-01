@@ -48,16 +48,45 @@ $(document).ready(function () {
 //         return false;
 //     });
 // });
+//VALIDATE FORM
+const resetFormsErrors = () => {
+    $('form span.error-input').each((i, el) => $(el).text(''));
 
+    $('label.has-errors').removeClass('has-errors')
+};
+const validateForm = form => {
+    const name  = $(form).find("input[name='name']"),
+          phone = $(form).find("input[name='phone']");
+          email = $(form).find("input[name='email']");
+    if ($(name).val().length === 0) {
+        $(name).siblings('span.error-input').text('Поле должно быть заполнено!');
+
+        $(name).parent('label.form-input').addClass('has-errors')
+    }
+    if ($(email).val().length === 0) {
+        $(email).siblings('span.error-input').text('Поле должно быть заполнено!');
+
+        return $(phone).parent('label.form-input').addClass('has-errors')
+    }
+    if ($(phone).val().length === 0) {
+        $(phone).siblings('span.error-input').text('Поле должно быть заполнено!');
+
+        return $(phone).parent('label.form-input').addClass('has-errors')
+    }
+    if ($(phone).val().length < 17) {
+        $(phone).parent('label.form-input').addClass('has-errors');
+
+        return $(phone).siblings('span.error-input').text('Введите телефон полностью!');
+    }
+};
 // form
 $(document).ready(function () {
     $('#form, #popupForm').submit(function (e) {
         e.preventDefault();
         resetFormsErrors();
         const name  = $(this).find("input[name='name']"),
-              phone = $(this).find("input[name='phone']");
-              email  = $(this).find("input[name='email']"),
-              text = $(this).find("input[name='text']");
+              phone = $(this).find("input[name='phone']"),
+              email  = $(this).find("input[name='email']");
         if (!name || !phone || !email || $(name).val().trim().length === 0 || $(phone).val().length === 0) return validateForm(this);
         if ($(phone).val().length < 17) return validateForm(this);
         $.ajax({
