@@ -42,8 +42,8 @@ $(document).ready(function() {
             data: $(this).serialize()
         }).done(function() {
             $('.js-overlay-window-thank-you').fadeIn();
-            $(this).find('input').val('');
-            // $(this).trigger('reset');
+            // $(this).find('input').val('');
+            $(this).trigger('reset');
         });
         return false;
     });
