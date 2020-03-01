@@ -60,9 +60,9 @@ button:focus {
 .pos-rel {
 	position: relative;
 }
-/*.has-errors {
+.has-errors {
 	border: 1px solid #E13838;
-}*/
+}
 .error-input {
 	color: #E13838;
     font-size: 9px;
