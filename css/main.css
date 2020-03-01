@@ -71,8 +71,23 @@ button:focus {
     display: none;
     z-index: 999999;
 }
+.menu-modal {
+    display: none;
+    position: fixed;
+    right: 0;
+    top: 0;
+    width: 27%;
+    height: 100%;
+    background: #434878e8;
+    padding: 120px 35px 40px;
+    z-index: 1;
+}
+.popup-form {
+	display: none;
+}
 /*thank modal*/
-.popup-form_thank {
+.popup-form_thank,
+.popup-form {
 	position: fixed;
 	width: 400px;
 	left: 50%;
