@@ -43,7 +43,7 @@ $(document).ready(function() {
         }).done(function() {
             $('.js-overlay-window-thank-you').fadeIn();
             $(this).find('input').val('');
-            $(this).trigger('reset');
+            // $(this).trigger('reset');
         });
         return false;
     });
