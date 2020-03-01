@@ -30,24 +30,50 @@ $(document).ready(function () {
 });
 
 // Отправка заявки 
-$(document).ready(function() {
-    $('#form').submit(function() { // проверка на пустоту заполненных полей. Атрибут html5 — required не подходит (не поддерживается Safari)
-        if (document.form.name.value == '' || document.form.phone.value == '' ) {
-            valid = false;
-            return valid;
-        }
+// $(document).ready(function() {
+//     $('#form').submit(function() { // проверка на пустоту заполненных полей. Атрибут html5 — required не подходит (не поддерживается Safari)
+//         if (document.form.name.value == '' || document.form.phone.value == '' ) {
+//             valid = false;
+//             return valid;
+//         }
+//         $.ajax({
+//             type: "POST",
+//             url: "mail/mail.php",
+//             data: $(this).serialize()
+//         }).done(function() {
+//             $('.js-overlay-window-thank-you').fadeIn();
+//             // $(this).find('input').val('');
+//             $('#form').trigger('reset');
+//         });
+//         return false;
+//     });
+// });
+
+// form
+$(document).ready(function () {
+    $('#form, #popupForm').submit(function (e) {
+        e.preventDefault();
+        resetFormsErrors();
+        const name  = $(this).find("input[name='name']"),
+              phone = $(this).find("input[name='phone']");
+              email  = $(this).find("input[name='email']"),
+              text = $(this).find("input[name='text']");
+        if (!name || !phone || !email || $(name).val().trim().length === 0 || $(phone).val().length === 0) return validateForm(this);
+        if ($(phone).val().length < 17) return validateForm(this);
         $.ajax({
             type: "POST",
-            url: "mail/mail.php",
+            url:  "mail/mail.php",
             data: $(this).serialize()
-        }).done(function() {
+        }).done(() => {
+            $(this).trigger('reset');
             $('.js-overlay-window-thank-you').fadeIn();
-            // $(this).find('input').val('');
-            $('#form').trigger('reset');
         });
         return false;
     });
 });
+
+
+
 
 // CLOSE WINDOW MODAL
 $('.js-close-window').click(function (e) {
