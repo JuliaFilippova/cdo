@@ -73,7 +73,7 @@ const validateForm = form => {
 
         return $(phone).parent('label.form-input').addClass('has-errors')
     }
-    if ($(phone).val().length < 17) {
+    if ($(phone).val().length < 12) {
         $(phone).parent('label.form-input').addClass('has-errors');
 
         return $(phone).siblings('span.error-input').text('Введите телефон полностью!');
