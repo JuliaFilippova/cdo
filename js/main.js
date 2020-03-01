@@ -55,13 +55,29 @@ $('.js-close-window').click(function (e) {
     
     $('.js-overlay-window').fadeOut();
 });
-CLOSE OVERLAY MODAL
+//CLOSE OVERLAY MODAL
 $(document).mouseup(function (e) {
     let popup = $('.js-overlay-window');
 
     if (e.target != popup[0] && popup.has(e.target).length === 0) {
         $('.js-overlay-window').fadeOut();
     }
+});
+
+//hamburger
+$('#btnForm').on('click',function() {
+    $('.popup-form').toggle();
+    $('#modal').toggle();
+});
+//close bg
+$('#modal').on('click',function() {
+    $('.popup-form').hide();
+    $('#modal').hide();
+});
+//close bg
+$('.js-close-window').on('click',function() {
+    $('.popup-form').hide();
+    $('#modal').hide();
 });
 
 // Маска ввода номера телефона (плагин maskedinput)
