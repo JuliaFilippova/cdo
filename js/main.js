@@ -1,4 +1,11 @@
 // MODAL WINDOW
+$('.carpark-cards__btn').click(function(){
+    $('#exampleCar1').arcticmodal({
+        closeOnEsc: true,
+        closeOnOverlayClick: true,
+    });
+    
+});
 //hamburger
 $('#menuToggle').on('click',function() {
     $('.menu-modal').toggle();
