@@ -120,6 +120,7 @@ button:focus {
 	background-color: #30344dbf;
 	text-align: center;
 	margin-bottom: 45px;
+	display: none;
 }
 .form-modal__title {
 	font-size: 25px;
@@ -583,6 +584,7 @@ button:focus {
 	text-align: center;
 	padding: 15px 30px;
 	outline: none;
+	margin-bottom: 15px;
 }
 .entrance-form__btn {
 	background: #34BF42;
